@@ -2602,6 +2602,7 @@ local notifications = library.notifications
         
         window.tweening = true 
         section:Label({Name = "UI Bind"}):Keybind({callback = function(bool) window.toggle_menu(bool) print(window.tweening) end, default = false})
+        section:Button({name = "Force Close", callback = function() library:unload_menu() end})
     end
 --
 
