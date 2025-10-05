@@ -1128,7 +1128,7 @@ local notifications = library.notifications
             });
             
             if cfg.name then
-                items[ "name" ] = setmetatable(cfg, library):Label({padding_top = 1})
+                items[ "name" ] = setmetatable(cfg, library):Label({name = cfg.name, padding_top = 1})
             end
 
             if cfg.show_value then 
