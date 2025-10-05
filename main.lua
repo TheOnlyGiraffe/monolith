@@ -2593,7 +2593,7 @@ local notifications = library.notifications
     function library:init_config(window) 
         local textbox;
         local main = window:Tab({name = "Configs", icon = "rbxassetid://112619895118673"})
-        local section = main:Section({name = "Settings", side = "right", size = 1, default = true})
+        local section = main:Section({name = "Settings", side = "left", size = 1, default = true})
         config_holder = section:Dropdown({Name = "Configs", options = {"Report", "This", "Error", "To", "Finobe"}, callback = function(option) if textbox then textbox.set(option) end end, flag = "config_name_list"}); library:update_config_list()
         textbox = section:Textbox({name = "Config name:", flag = "config_name_text"})
         section:Button({name = "Save", callback = function() writefile(library.directory .. "/configs/" .. flags["config_name_text"] .. ".cfg", library:get_config()) library:update_config_list() end}) 
